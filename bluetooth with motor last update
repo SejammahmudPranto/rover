@@ -1,28 +1,28 @@
-int lfmp=52; //leftfront motorplus
-int lfmm=53; //leftfront motorminus
-int lfmpwm=4;  //leftfrontmotorpwm
+int lfmp=36; //leftfront motorplus
+int lfmm=37; //leftfront motorminus
+int lfmpwm=12;  //leftfrontmotorpwm
 
-int lmmp=32; //leftmiddle motorplus
-int lmmm=33; //leftmiddle motorminus
-int lmmpwm=12;  //leftmiddlemotorpwm
+int lmmp=40; //leftmiddle motorplus
+int lmmm=41; //leftmiddle motorminus
+int lmmpwm=7;  //leftmiddlemotorpwm
 
-int lbmp=44; //leftback motorplus
-int lbmm=45; //leftback motorminus
-int lbmpwm=8;  //leftbackmotorpwm
+int lbmp=52; //leftback motorplus
+int lbmm=53; //leftback motorminus
+int lbmpwm=5;  //leftbackmotorpwm
 
 
 
-int rfmp=48; //rightfrontmotorplus
-int rfmm=49; //rightfrontmotorminus
-int rfmpwm=2;  //rightfrontmotorpwm
+int rfmp=32; //rightfrontmotorplus
+int rfmm=33; //rightfrontmotorminus
+int rfmpwm=10;  //rightfrontmotorpwm
 
-int rmmp=36; //rightmiddlemotorplus
-int rmmm=37; //rightmiddlemotorminus
-int rmmpwm=10;  //rightmiddlemotorpwm
+int rmmp=44; //rightmiddlemotorplus
+int rmmm=45; //rightmiddlemotorminus
+int rmmpwm=8;  //rightmiddlemotorpwm
 
-int rbmp=41; //rightbackmotorplus
-int rbmm=40; //rightbackmotorminus
-int rbmpwm=6;  //rightbackmotorpwm
+int rbmp=48; //rightbackmotorplus
+int rbmm=49; //rightbackmotorminus
+int rbmpwm=3;  //rightbackmotorpwm
 
 int state=0;
 int flag=0;
