@@ -1,13 +1,13 @@
-int lfmp=36; //leftfront motorplus
-int lfmm=37; //leftfront motorminus
+int lfmp=37; //leftfront motorplus
+int lfmm=36; //leftfront motorminus
 int lfmpwm=12;  //leftfrontmotorpwm
 
 int lmmp=40; //leftmiddle motorplus
 int lmmm=41; //leftmiddle motorminus
 int lmmpwm=7;  //leftmiddlemotorpwm
 
-int lbmp=52; //leftback motorplus
-int lbmm=53; //leftback motorminus
+int lbmp=53; //leftback motorplus
+int lbmm=52; //leftback motorminus
 int lbmpwm=5;  //leftbackmotorpwm
 
 
@@ -16,12 +16,12 @@ int rfmp=32; //rightfrontmotorplus
 int rfmm=33; //rightfrontmotorminus
 int rfmpwm=10;  //rightfrontmotorpwm
 
-int rmmp=44; //rightmiddlemotorplus
-int rmmm=45; //rightmiddlemotorminus
+int rmmp=45; //rightmiddlemotorplus
+int rmmm=44; //rightmiddlemotorminus
 int rmmpwm=8;  //rightmiddlemotorpwm
 
-int rbmp=48; //rightbackmotorplus
-int rbmm=49; //rightbackmotorminus
+int rbmp=49; //rightbackmotorplus
+int rbmm=48; //rightbackmotorminus
 int rbmpwm=3;  //rightbackmotorpwm
 
 int state=0;
@@ -208,6 +208,18 @@ void setup() {
 }
 
 void loop() {
+
+  /*forward();
+  delay(1000);
+  reverse();
+  delay(1000);
+  left();
+  delay(1000);
+  right();
+  delay(1000);
+  vehstop();*/
+  
+  
   if(Serial.available()>0) {
     state=Serial.read();
     flag=0;
