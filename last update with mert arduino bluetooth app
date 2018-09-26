@@ -1,5 +1,5 @@
-int lfmp=37; //leftfront motorplus
-int lfmm=36; //leftfront motorminus
+int lfmp=36; //leftfront motorplus
+int lfmm=37; //leftfront motorminus
 int lfmpwm=12;  //leftfrontmotorpwm
 
 int lmmp=40; //leftmiddle motorplus
@@ -12,12 +12,12 @@ int lbmpwm=5;  //leftbackmotorpwm
 
 
 
-int rfmp=32; //rightfrontmotorplus
-int rfmm=33; //rightfrontmotorminus
+int rfmp=33; //rightfrontmotorplus
+int rfmm=32; //rightfrontmotorminus
 int rfmpwm=10;  //rightfrontmotorpwm
 
-int rmmp=45; //rightmiddlemotorplus
-int rmmm=44; //rightmiddlemotorminus
+int rmmp=44; //rightmiddlemotorplus
+int rmmm=45; //rightmiddlemotorminus
 int rmmpwm=8;  //rightmiddlemotorpwm
 
 int rbmp=49; //rightbackmotorplus
