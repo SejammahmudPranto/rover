@@ -1,0 +1,94 @@
+#include<Servo.h>
+Servo servo1;
+Servo servo2;
+int acuppin=6;
+int acdownpin=7;
+int acpwmpin= 8;
+
+int vrapin=3;
+int vrbpin=4;
+int acpin=5;
+
+int ms=255;
+
+
+void acup() {
+  digitalWrite(acuppin,HIGH) ;
+  digitalWrite(acdownpin,LOW);
+  analogWrite(acpwmpin,ms);
+}
+
+void acdown() {
+  digitalWrite(acuppin,LOW) ;
+  digitalWrite(acdownpin,HIGH);
+  analogWrite(acpwmpin,ms);
+}
+
+void acstop() {
+  digitalWrite(acuppin,LOW) ;
+  digitalWrite(acdownpin,LOW);
+  analogWrite(acpwmpin,0);
+}
+
+
+
+int acfunc() {//actuator function
+  int w=pulseIn(acpin, HIGH);
+  if (w>  && w<  ) {
+    return 1;
+  } else if (w<  && w>  ) {
+    return 0;
+  } else if (w>  ) {
+    return 2;
+  } else {
+    return 3;
+  }
+}
+
+void setup() {
+   servo1.attach(10);
+   servo2.attach(11);
+   pinMode(acuppin,OUTPUT);
+   pinMode(acdownpin,OUTPUT);
+   pinMode(acpwmpin,OUTPUT);
+   pinMode(vrapin,INPUT);
+   pinMode(vrbpin,INPUT);
+   pinMode(acpin,INPUT);
+   Serial.begin(9600);
+  
+  // put your setup code here, to run once:
+
+}
+
+void loop() {
+  int servo1,servo2,act;
+  int x,y,z;
+  int servo1map,servo2map;
+  x=acfunc();
+  
+  
+  if (x=1 || x=3) {//aclogic
+    acstop();
+  } else if (x=0) {
+    acdown();
+  } else if(x=2) {
+    acup();
+  }
+
+
+  y=pulseIn(vrapin, HIGH);
+  z=pulseIn(vrbpin,HIGH);
+
+  y=constrain(y, 1000, 2015);
+  servo1map=map(y, 1000, 2015, 0,40);
+  servo1.write(servo1map);
+
+  z=constrain(z, 1000, 2015);
+  servo2map=map(z, 1000, 2015, 0,180);
+  servo2.write(servo2map);
+
+  
+  
+  // put your main code here, to run repeatedly:
+
+}
